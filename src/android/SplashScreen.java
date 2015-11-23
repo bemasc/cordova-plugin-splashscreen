@@ -107,7 +107,7 @@ public class SplashScreen extends CordovaPlugin {
             return;
         }
         // hide the splash screen to avoid leaking a window
-        this.removeSplashScreen();
+        //////// BEMASC HACK this.removeSplashScreen();
     }
 
     @Override
@@ -116,7 +116,7 @@ public class SplashScreen extends CordovaPlugin {
             return;
         }
         // hide the splash screen to avoid leaking a window
-        this.removeSplashScreen();
+        ////// BEMASC HACK this.removeSplashScreen();
         // If we set this to true onDestroy, we lose track when we go from page to page!
         //firstShow = true;
     }
@@ -207,7 +207,7 @@ public class SplashScreen extends CordovaPlugin {
      */
     @SuppressWarnings("deprecation")
     private void showSplashScreen(final boolean hideAfterDelay) {
-        final int splashscreenTime = preferences.getInteger("SplashScreenDelay", 3000);
+        final int splashscreenTime = 15000;
         final int drawableId = preferences.getInteger("SplashDrawableId", 0);
 
         // If the splash dialog is showing don't try to show it again
